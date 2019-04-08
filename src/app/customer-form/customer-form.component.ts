@@ -64,7 +64,7 @@ export class CustomerFormComponent implements OnInit {
   }
 
   fetchCustomer(id: number){
-    this.customersService.getCustomer(parseInt(id))
+    this.customersService.getCustomer(id)
     .subscribe((response) => {
       this.customer = response.data.customer;
       this.isCustomerReady = true;
@@ -85,7 +85,21 @@ export class CustomerFormComponent implements OnInit {
     if (this.id){
       this.fetchCustomer(this.id);
     }else{
-      this.customer = {};
+      this.customer = {
+    name: null,
+    federalId: null,
+    phone: null,
+    active: null,
+    email: null,
+    emailCollection: null,
+    rg: null,
+    phone2: null,
+    id: null,
+    residentialPhone: null,
+    commercialPhone: null,
+    federalIdType: null,
+    gender: null
+      }
       this.isCustomerReady = true;
     }
   }
