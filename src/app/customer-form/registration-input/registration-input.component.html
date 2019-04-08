@@ -1,0 +1,9 @@
+<div [formGroup]="parentForm">
+	<input 
+		type="text"
+		id="registration"
+		formControlName="registration"
+		class="form-control"
+		placeholder="RG"
+		value="{{ registrationVal && registrationVal != 'null'  ? registrationVal : null}}">
+</div>

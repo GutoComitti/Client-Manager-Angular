@@ -1,0 +1,22 @@
+<div [formGroup]="parentForm">
+	<div class="form-group mb-0">
+		<input 
+		type="radio"
+		id="federalIdRadioF"
+		formControlName="federalIdRadio"
+		name="federalIdRadio"
+		[checked]="federalIdVal == 'F' ? 'checked' : null"
+		value="F">
+		<label for="federalIdRadioF">CPF</label>
+	</div>
+	<div class="form-group mb-0">
+		<input 
+		type="radio"
+		id="federalIdRadioJ"
+		formControlName="federalIdRadio"
+		name="federalIdRadio"
+		[checked]="federalIdVal == 'J' ? 'checked' : null"
+		value="J">
+		<label for="federalIdRadioJ">CNPJ</label>
+	</div>
+</div>

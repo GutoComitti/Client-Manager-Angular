@@ -1,0 +1,10 @@
+<div [formGroup]="parentForm">
+	<label class="switch">
+	  <input type="checkbox"
+				id="active"
+				formControlName="active"
+				[checked]="activeVal === true ? 'checked' : null">
+	  <span class="slider round"></span>
+	  {{ activeVal ? 'Ativo' : 'Inativo' }}
+	</label>
+</div>

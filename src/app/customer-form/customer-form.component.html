@@ -1,0 +1,111 @@
+
+<div class="container">
+	<div class="row">
+		<form [formGroup]="clientForm" (ngSubmit)="onSubmit()" class="customerForm" *ngIf="isCustomerReady">
+			<div class="row">
+				<div class="col-12">
+					<app-active-radio 
+						[activeVal]="!!customer.active" 
+						[parentForm]="clientForm">
+					</app-active-radio>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-2">
+					<app-federalid-radio 
+						[parentForm]="clientForm" 
+						[federalIdVal]="customer.federalIdType ? customer.federalId : null">
+					</app-federalid-radio>
+				</div>
+				<div class="col-4">
+					<app-name-input 
+						[parentForm]="clientForm" 
+						[nameVal]="customer.name ? customer.name : null">
+					</app-name-input>
+				</div>
+				<div class="col-3">
+					<app-federalid-input 
+						[parentForm]="clientForm" 
+						[federalIdVal]="customer.federalId ? customer.federalId : null">
+					</app-federalid-input>
+				</div>
+				<div class="col-3">
+					<app-gender-radio 
+						[parentForm]="clientForm" 
+						[genderVal]="customer.gender ? customer.gender : null">
+					</app-gender-radio>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-6">
+					<app-registration-input 
+						[parentForm]="clientForm" 
+						[registrationVal]="customer.registration ? customer.registration : null">
+					</app-registration-input>
+				</div>
+				<div class="col-6">
+					<app-email-input 
+						[parentForm]="clientForm" 
+						[emailVal]="customer.email ? customer.email : null">
+					</app-email-input>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-6">
+					<app-phone-input 
+						[parentForm]="clientForm" 
+						[phoneVal]="customer.phone ? customer.phone : null">
+					</app-phone-input>
+				</div>
+				<div class="col-6">
+					<app-phone2-input 
+						[parentForm]="clientForm" 
+						[phone2Val]="customer.phone2 ? customer.phone2 : null">
+					</app-phone2-input>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-6">
+					<app-residentialphone-input 
+						[parentForm]="clientForm" 
+						[residentialPhoneVal]="customer.residentialPhone ? customer.residentialPhone : null">
+					</app-residentialphone-input>
+				</div>
+				<div class="col-6">
+					<app-commercialphone-input 
+						[parentForm]="clientForm" 
+						[commercialPhoneVal]="customer.commercialPhone ? customer.commercialPhone : null">
+					</app-commercialphone-input>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-12">
+					<app-emailcollection-input 
+						[parentForm]="clientForm" 
+						[emailCollectionVal]="customer.emailCollection ? customer.emailCollection : null">
+					</app-emailcollection-input>
+				</div>
+			</div>
+			<br>
+			<div class="row">
+				<div class="col">Campos obrigatórios*</div>
+				<div class="col">
+					<div class="float-right">
+						<button 
+							class="btn btn-light" 
+							(click)="onCancel()" 
+							type="button">
+							Cancelar
+						</button>
+						<button 
+							class="btn btn-primary" 
+							type="submit" 
+							[disabled]="clientForm.invalid">
+							{{ isEdit ? 'Atualizar' : 'Salvar'}}
+						</button>
+					</div>
+				</div>
+			</div>
+		</form>
+	</div>
+</div>

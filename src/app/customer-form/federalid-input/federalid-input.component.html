@@ -1,0 +1,12 @@
+<div [formGroup]="parentForm">
+	<input 
+		type="text"
+		id="FederalIdInput"
+		formControlName="federalId"
+		class="form-control"
+		placeholder="CPF ou CNPJ*"
+		value="{{ federalIdVal ? federalIdVal : null }}"
+		[ngClass]="{'errorField': federalId.invalid && federalId.touched}">
+  <div class="error" *ngIf="federalId.invalid && federalId.touched">Campo inválido!</div>
+		<!--TODO: Bind o valor do placeholder ao radio federalId -->
+</div>

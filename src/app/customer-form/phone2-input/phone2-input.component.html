@@ -1,0 +1,9 @@
+<div [formGroup]="parentForm">
+	<input 
+		type="text"
+		id="phone2"
+		formControlName="phone2"
+		class="form-control"
+		value="{{ phone2Val && phone2Val != 'null' ? phone2Val : null }}"
+		placeholder="Celular 2">
+</div>

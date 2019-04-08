@@ -1,0 +1,11 @@
+<div [formGroup]="parentForm">
+	<input 
+		type="email"
+		id="email"
+		formControlName="email"
+		class="form-control"
+		placeholder="E-mail *"
+		value="{{ emailVal ? emailVal : null }}"
+		[ngClass]="{'errorField': email.invalid && email.touched}">
+  <div class="error" *ngIf="email.invalid && email.touched">Campo inválido!</div>
+</div>

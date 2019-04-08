@@ -1,0 +1,16 @@
+input{
+	border: 0;
+	border-bottom: 1px solid lightgrey;
+}
+
+.form-group + input[type=radio]{
+	margin-bottom: 0;
+}
+
+.errorField{
+	border: 1px solid red;
+}
+
+.error{
+	font-size: 0.75rem;
+}

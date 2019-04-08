@@ -1,0 +1,71 @@
+.full-width-table {
+  width: 100%;
+}
+
+.tableWrapper{
+	margin: auto;
+	width: 80%;
+}
+
+.mat-elevation-z8{
+	box-shadow: none;
+}
+
+.mat-table{
+	font-family: sans-serif;
+	text-align: center;
+	border-top: 6px solid rgb(245, 244, 249);
+}
+
+.removeBtn:hover{
+	cursor: pointer;
+}
+
+.addBtn{
+	float: right;
+}
+
+.mat-table, .mat-paginator{
+	border-right: 6px solid rgb(245, 244, 249); 
+	border-left: 4px solid rgb(245, 244, 249);
+}
+
+.mat-paginator{
+	border-bottom: 4px solid rgb(245, 244, 249);
+}
+
+.mat-header-row{
+	background: rgb(234, 238, 241);
+}
+
+.mat-row.ng-star-inserted:nth-child(2n){
+	background: rgb(250, 249, 254);
+}
+
+.td.mat-cell{
+	padding: 0 15px;
+}
+
+a{
+	color: black;
+}
+
+::ng-deep .mat-sort-header-container {
+  display:flex;
+  justify-content:center;
+}
+
+.activeStatus, .inactiveStatus{
+	border-radius: 1000px;
+	color: white;
+}
+
+.activeStatus{
+	background: rgb(95, 184, 105);
+	font-size: 12px;
+}
+
+.inactiveStatus{
+	background: rgb(237, 78, 78);
+	font-size: 12px;
+}

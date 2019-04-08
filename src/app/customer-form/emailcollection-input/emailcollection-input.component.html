@@ -1,0 +1,11 @@
+<div [formGroup]="parentForm">
+	<input 
+		type="email"
+		id="emailCollection"
+		formControlName="emailCollection"
+		class="form-control"
+		placeholder="E-mail de cobrança (use ; para separar os endereços) *"
+		[ngClass]="{'errorField': emailCollection.invalid && emailCollection.touched}"
+		value="{{ emailCollectionVal ? emailCollectionVal : null }}">
+  <div class="error" *ngIf="emailCollection.invalid && emailCollection.touched">Campo inválido!</div>
+</div>
